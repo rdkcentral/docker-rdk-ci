@@ -3,7 +3,7 @@
 FROM ubuntu:22.04
 ARG DEBIAN_FRONTEND=noninteractive
 
-LABEL org.opencontainers.image.source https://github.com/rdkcentral/docker-rdk-ci
+LABEL org.opencontainers.image.source=https://github.com/rdkcentral/docker-rdk-ci
 LABEL org.opencontainers.image.authors="RDK Engineers"
 LABEL org.opencontainers.image.description="RDK CI Docker Image"
 LABEL org.opencontainers.image.architectures="amd64, arm64"
@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y build-essential \
           libmsgpack-dev libsystemd-dev libssl-dev libcjson-dev python3-pip libsqlite3-dev \
           libgtest-dev libgmock-dev libjansson-dev libbsd-dev tcl-dev \
           libboost-all-dev libwebsocketpp-dev libcunit1 libcunit1-dev libunwind-dev \
-          gdb valgrind lcov clang g++ wget gperf ruby-full 
+          gdb valgrind lcov clang g++ wget gperf ruby-full curl
 
 # Common python packages
 RUN pip3 install xmltodict requests jsonref
@@ -38,6 +38,10 @@ RUN cd .. && rm -rf WORK_DIR && rm -rf cmake-3.17.3.tar.gz && rm -rf cmake-3.17.
 RUN cd /usr/src/googletest/googlemock/ && mkdir build && cmake .. && make && make install
 
 RUN mkdir -p /home/mount
+
+# Install nodejs
+RUN curl -sL https://deb.nodesource.com/setup_22.x | bash -
+RUN apt-get install -q -y nodejs
 
 # Trim down the docker image size
 RUN rm -rf /var/lib/apt/lists/*
