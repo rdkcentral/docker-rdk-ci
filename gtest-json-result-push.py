@@ -42,6 +42,7 @@ def json_string(xml_file_path, git_folder_path):
     
     #The below command will work on the github action container to get the component name
     component_name=os.popen('git remote -v | grep fetch | cut -d "/" -f5 | cut -d " " -f1').read()
+    execution_link="https://github.com/rdkcentral"
     developer=os.popen('git log --pretty="format:%an" -n 1').read()
     jira_ticket=os.popen('git log --pretty="format:%s" -n 1 | cut -d ":" -f1').read()
     
@@ -53,6 +54,7 @@ def json_string(xml_file_path, git_folder_path):
     json_root = {
         "commit_id": commit_id.strip(),
         "component_name": component_name.strip(),
+        "execution_link": execution_link.strip(),
         "developer": developer.strip(),
         "jira_ticket": jira_ticket.strip()
     }
