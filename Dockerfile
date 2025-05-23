@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y build-essential \
           libglib2.0-dev python3-distutils libcurl4-openssl-dev \
           libmsgpack-dev libsystemd-dev libssl-dev libcjson-dev python3-pip libsqlite3-dev \
           libgtest-dev libgmock-dev libjansson-dev libbsd-dev tcl-dev \
-          libboost-all-dev libwebsocketpp-dev libcunit1 libcunit1-dev libunwind-dev \
+          libboost-all-dev libwebsocketpp-dev libcunit1 libcunit1-dev libunwind-dev libcap-dev libdbus-1-dev \
           gdb valgrind lcov clang g++ wget gperf ruby-full curl
 
 # Common python packages
