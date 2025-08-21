@@ -16,7 +16,8 @@ RUN apt-get update && apt-get install -y build-essential \
           libmsgpack-dev libsystemd-dev libssl-dev libcjson-dev python3-pip libsqlite3-dev \
           libgtest-dev libgmock-dev libjansson-dev libbsd-dev tcl-dev \
           libboost-all-dev libwebsocketpp-dev libcunit1 libcunit1-dev libunwind-dev libcap-dev libdbus-1-dev libavro-dev \
-          gdb valgrind lcov clang g++ wget gperf ruby-full curl
+          gdb valgrind lcov clang g++ wget gperf ruby-full curl \
+          libnanomsg-dev libqmi-glib-dev
 
 # Common python packages
 RUN pip3 install xmltodict requests jsonref
