@@ -17,11 +17,6 @@ RUN apt-get update && apt-get install -y build-essential \
           libgtest-dev libgmock-dev libjansson-dev libbsd-dev tcl-dev \
           libboost-all-dev libwebsocketpp-dev libcunit1 libcunit1-dev libunwind-dev libcap-dev libdbus-1-dev libavro-dev \
           gdb valgrind lcov clang g++ wget gperf ruby-full curl
-          # Base image
-FROM ubuntu:20.04
-
-# Set non-interactive mode for apt
-ENV DEBIAN_FRONTEND=noninteractive
 
 # Update and install system dependencies
 RUN apt-get update && apt-get install -y \
@@ -39,7 +34,8 @@ RUN apt-get update && apt-get install -y \
     && add-apt-repository ppa:ubuntu-toolchain-r/ppa -y \
     && apt-get update
 
-# Python and pip dependencies
+
+ #Python and pip dependencies
 RUN apt-get install -y python3-pip python3-distutils \
     && pip install --no-cache-dir \
     flake8 peru jsonref websockets pandas beautifulsoup4 flask colorama
