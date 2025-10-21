@@ -18,7 +18,8 @@ RUN apt-get update && apt-get install -y build-essential \
           libboost-all-dev libwebsocketpp-dev libcunit1 libcunit1-dev libunwind-dev libcap-dev libdbus-1-dev libavro-dev \
           gdb valgrind lcov clang g++ wget gperf ruby-full curl
 
-# Update and install system dependencies
+
+# Update and install additional system dependencies
 RUN apt-get update && apt-get install -y \
     build-essential cmake ninja-build meson \
     wget curl openssl tar vim git git-lfs \
@@ -35,7 +36,8 @@ RUN apt-get update && apt-get install -y \
     && apt-get update
 
 
- #Python and pip dependencies
+
+# Python and pip dependencies
 RUN apt-get install -y python3-pip python3-distutils \
     && pip install --no-cache-dir \
     flake8 peru jsonref websockets pandas beautifulsoup4 flask colorama
