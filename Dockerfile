@@ -28,13 +28,10 @@ RUN apt-get install -y \
     libavro-dev libusb-1.0-0-dev libjsoncpp-dev libwebsockets-dev \
     libdirectfb-dev net-tools netcat-openbsd psmisc gdb valgrind lcov clang \
     g++ g++-9 gcc-9 ruby-full csvtool lynx autoconf gperf \
-    python3-pip python3-setuptools \
+    python3-pip python3-setuptools python3-flake8 python3-pandas python3-bs4 \
+    python3-colorama \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-
-# Install Python packages
-RUN pip install --no-cache-dir \
-    flake8
 
 # Install Python packages
 RUN pip install --no-cache-dir \
@@ -50,19 +47,7 @@ RUN pip install --no-cache-dir \
 
 # Install Python packages
 RUN pip install --no-cache-dir \
-    pandas
-
-# Install Python packages
-RUN pip install --no-cache-dir \
-    beautifulsoup4
-
-# Install Python packages
-RUN pip install --no-cache-dir \
     flask
-
-# Install Python packages
-RUN pip install --no-cache-dir \
-    colorama
 
 
 # Common python packages
