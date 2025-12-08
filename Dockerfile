@@ -28,14 +28,14 @@ RUN apt-get install -y \
     libavro-dev libusb-1.0-0-dev libjsoncpp-dev libwebsockets-dev \
     libdirectfb-dev net-tools netcat psmisc gdb valgrind lcov clang \
     g++ g++-9 gcc-9 ruby-full csvtool lynx autoconf gperf \
-    python3-pip python3-distutils \
+    python3-pip \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 
 
 # Install Python packages
 RUN pip install --no-cache-dir \
-    flake8 peru jsonref websockets pandas beautifulsoup4 flask colorama
+    setuptools flake8 peru jsonref websockets pandas beautifulsoup4 flask colorama
 
 
 
