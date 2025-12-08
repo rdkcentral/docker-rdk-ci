@@ -27,15 +27,14 @@ RUN apt-get install -y \
     libcunit1 libcunit1-dev libunwind-dev libcap-dev libdbus-1-dev \
     libavro-dev libusb-1.0-0-dev libjsoncpp-dev libwebsockets-dev \
     libdirectfb-dev net-tools netcat-openbsd psmisc gdb valgrind lcov clang \
-    g++ g++-9 gcc-9 ruby-full csvtool lynx autoconf gperf \
+    g++ g++-9 gcc-9 ruby-full csvtool lynx autoconf gperf pipx \
     python3-pip python3-setuptools python3-flake8 python3-pandas python3-bs4 \
     python3-colorama \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 
 # Install Python packages
-RUN pip install --no-cache-dir \
-    peru
+RUN pipx install peru
 
 # Install Python packages
 RUN pip install --no-cache-dir \
