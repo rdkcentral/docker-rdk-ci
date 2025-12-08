@@ -2,7 +2,7 @@ name: Build and Push amd64 Docker Image to GHCR
 
 on:
   pull_request:
-    branches: [ main, develop ]
+    branches: [ feature/upgrade-24-04 ]
 
 jobs:
   build-and-push:

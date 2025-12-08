@@ -3,7 +3,7 @@ name: Build and Push amd64 Docker Image to GHCR
 on:
   push:
     branches:
-      - main
+      - feature/upgrade-24-04
 
     tags:
       - '[0-9]+.[0-9]+.[0-9]+'
@@ -11,7 +11,7 @@ on:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
-    if : ${{ github.event_name == 'push' && github.ref_type == 'tag' }}  
+    if : ${{ github.event_name == 'push'}}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -33,5 +33,4 @@ jobs:
           platforms: linux/amd64, linux/arm64
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}:${{ github.ref_name }}
-            ghcr.io/${{ github.repository }}:latest
+            ghcr.io/${{ github.repository }}:24.04
