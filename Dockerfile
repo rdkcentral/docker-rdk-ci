@@ -34,19 +34,8 @@ RUN apt-get install -y \
 
 
 # Install Python packages
-RUN pipx install peru
-
-# Install Python packages
-RUN pip install --no-cache-dir \
-    jsonref
-
-# Install Python packages
-RUN pip install --no-cache-dir \
-    websockets
-
-# Install Python packages
-RUN pip install --no-cache-dir \
-    flask
+RUN pipx install \
+    peru jsonref websockets flask
 
 
 # Common python packages
