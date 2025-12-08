@@ -43,7 +43,7 @@ RUN pipx install websockets
 RUN pipx install flask
 
 # Install Python packages
-RUN pip install jsonref
+RUN pip install jsonref --break-system-packages
 
 
 # Common python packages
