@@ -32,11 +32,37 @@ RUN apt-get install -y \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 
+# Install Python packages
+RUN pip install --no-cache-dir \
+    flake8
 
 # Install Python packages
 RUN pip install --no-cache-dir \
-    flake8 peru jsonref websockets pandas beautifulsoup4 flask colorama
+    peru
 
+# Install Python packages
+RUN pip install --no-cache-dir \
+    jsonref
+
+# Install Python packages
+RUN pip install --no-cache-dir \
+    websockets
+
+# Install Python packages
+RUN pip install --no-cache-dir \
+    pandas
+
+# Install Python packages
+RUN pip install --no-cache-dir \
+    beautifulsoup4
+
+# Install Python packages
+RUN pip install --no-cache-dir \
+    flask
+
+# Install Python packages
+RUN pip install --no-cache-dir \
+    colorama
 
 
 # Common python packages
