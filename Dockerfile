@@ -29,13 +29,9 @@ RUN apt-get install -y \
     libdirectfb-dev net-tools netcat-openbsd psmisc gdb valgrind lcov clang \
     g++ g++-9 gcc-9 ruby-full csvtool lynx autoconf gperf \
     python3-pip python3-setuptools python3-flake8 python3-pandas python3-bs4 \
-    python3-colorama \
+    python3-colorama python3-peru \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-
-# Install Python packages
-RUN pip install --no-cache-dir \
-    peru
 
 # Install Python packages
 RUN pip install --no-cache-dir \
