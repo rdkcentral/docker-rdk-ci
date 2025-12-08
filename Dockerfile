@@ -34,8 +34,16 @@ RUN apt-get install -y \
 
 
 # Install Python packages
-RUN pipx install \
-    peru jsonref websockets flask
+RUN pipx install peru
+
+# Install Python packages
+RUN pipx install websockets
+
+# Install Python packages
+RUN pipx install flask
+
+# Install Python packages
+RUN pipx install jsonref
 
 
 # Common python packages
