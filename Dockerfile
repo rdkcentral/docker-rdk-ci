@@ -26,7 +26,7 @@ RUN apt-get install -y \
     libbsd-dev tcl-dev libboost-all-dev libwebsocketpp-dev \
     libcunit1 libcunit1-dev libunwind-dev libcap-dev libdbus-1-dev \
     libavro-dev libusb-1.0-0-dev libjsoncpp-dev libwebsockets-dev \
-    libdirectfb-dev net-tools netcat psmisc gdb valgrind lcov clang \
+    libdirectfb-dev net-tools netcat-openbsd psmisc gdb valgrind lcov clang \
     g++ g++-9 gcc-9 ruby-full csvtool lynx autoconf gperf \
     python3-pip \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
