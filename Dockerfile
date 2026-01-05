@@ -9,13 +9,15 @@ LABEL org.opencontainers.image.description="RDK CI Docker Image"
 LABEL org.opencontainers.image.architectures="amd64, arm64"
 
 # Add instructions to install autotools
-RUN apt-get update && apt-get install -y \
-    automake build-essential clang curl g++ gcc gdb git git-lfs gperf iputils-ping jq lcov libavro-dev \
-    libbsd-dev libc6-dev libcjson-dev libjsoncpp-dev libcap-dev libcurl4-openssl-dev libdbus-1-dev libdbus-glib-1-dev libgmock-dev libgtest-dev \
-    libglib2.0-dev libjansson-dev liblog4c-dev libmsgpack-dev libnetfilter-queue-dev libnfnetlink-dev libsqlite3-dev \
-    libssl-dev libsystemd-dev libtirpc-dev libtool libunwind-dev libwebsocketpp-dev libxml2-utils libcunit1 libcunit1-dev libpcap-dev \
-    meson net-tools ninja-build openssl python3-distutils python3-pip ruby-full tar tcl-dev valgrind vim wget libmnl-dev \
-    zlib1g-dev libupnp-dev libnanomsg-dev libevent-dev libnl-3-dev libnl-route-3-dev libnl-nf-3-dev \
+RUN apt-get update && apt-get install -y build-essential \
+          wget openssl tar vim git git-lfs \
+          libtool autotools-dev automake zlib1g-dev ninja-build meson \
+          libglib2.0-dev python3-distutils libcurl4-openssl-dev jq \
+          libmsgpack-dev libsystemd-dev libssl-dev libcjson-dev python3-pip libsqlite3-dev \
+          libgtest-dev libgmock-dev libjansson-dev libbsd-dev tcl-dev \
+          libboost-all-dev libwebsocketpp-dev libcunit1 libcunit1-dev libunwind-dev libcap-dev libdbus-1-dev libavro-dev liblog4c-dev libtirpc-dev \
+          libc6-dev, libevent-dev, libmnl-dev, libnanomsg-dev, libnetfilter-queue-dev, libnfnetlink-dev, libnl-3-dev, libnl-nf-3-dev, libnl-route-3-dev, libupnp-dev, libxml2-utils \
+          gdb valgrind lcov clang g++ wget gperf ruby-full curl gcc
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
