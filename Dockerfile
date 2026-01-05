@@ -16,7 +16,8 @@ RUN apt-get update && apt-get install -y build-essential \
           libmsgpack-dev libsystemd-dev libssl-dev libcjson-dev python3-pip libsqlite3-dev \
           libgtest-dev libgmock-dev libjansson-dev libbsd-dev tcl-dev \
           libboost-all-dev libwebsocketpp-dev libcunit1 libcunit1-dev libunwind-dev libcap-dev libdbus-1-dev libavro-dev liblog4c-dev libtirpc-dev \
-          libc6-dev, libevent-dev, libmnl-dev, libnanomsg-dev, libnetfilter-queue-dev, libnfnetlink-dev, libnl-3-dev, libnl-nf-3-dev, libnl-route-3-dev, libupnp-dev, libxml2-utils \
+          libnetfilter-queue-dev, libnfnetlink-dev, libnl-3-dev, libnl-nf-3-dev, libnl-route-3-dev \
+          libc6-dev, libevent-dev, libmnl-dev, libnanomsg-dev, libupnp-dev, libxml2-utils \
           gdb valgrind lcov clang g++ wget gperf ruby-full curl gcc \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
