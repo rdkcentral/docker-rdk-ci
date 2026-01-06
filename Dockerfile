@@ -11,7 +11,7 @@ LABEL org.opencontainers.image.architectures="amd64, arm64"
 # Add instructions to install autotools
 RUN apt-get update && apt-get install -y build-essential \
           wget openssl tar vim git git-lfs \
-          gdb valgrind lcov clang g++ wget gperf ruby-full curl \
+          gdb valgrind lcov clang g++ gperf ruby-full curl \
           libtool autotools-dev automake zlib1g-dev ninja-build meson \
           libglib2.0-dev python3-distutils libcurl4-openssl-dev jq \
           libmsgpack-dev libsystemd-dev libssl-dev libcjson-dev python3-pip libsqlite3-dev \
