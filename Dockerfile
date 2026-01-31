@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y build-essential \
           libgtest-dev libgmock-dev libjansson-dev libbsd-dev tcl-dev \
           libboost-all-dev libwebsocketpp-dev libcunit1 libcunit1-dev libunwind-dev libcap-dev libdbus-1-dev libavro-dev liblog4c-dev libtirpc-dev \
           libnetfilter-queue-dev libnfnetlink-dev libnl-3-dev libnl-nf-3-dev libnl-route-3-dev \
-          libc6-dev libdbus-glib-1-dev libevent-dev libjsoncpp-dev libmnl-dev libnanomsg-dev libpcap-dev libupnp-dev libxml2-utils libev-dev \
+          libc6-dev libdbus-glib-1-dev libevent-dev libjsoncpp-dev libmnl-dev libnanomsg-dev libpcap-dev libupnp-dev libxml2-utils libev-dev libsnmp-dev \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
