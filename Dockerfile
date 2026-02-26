@@ -25,7 +25,7 @@ RUN apt-get install -y \
     libgtest-dev libgmock-dev libjansson-dev libjansson4 \
     libbsd-dev tcl-dev libboost-all-dev libwebsocketpp-dev \
     libcunit1 libcunit1-dev libunwind-dev libcap-dev libdbus-1-dev \
-    libavro-dev libusb-1.0-0-dev libjsoncpp-dev libwebsockets-dev \
+    libavro-dev libusb-1.0-0-dev libjsoncpp-dev libwebsockets-dev libqmi-glib-dev \
     libdirectfb-dev net-tools netcat psmisc gdb valgrind lcov clang \
     g++ g++-9 gcc-9 ruby-full csvtool lynx autoconf gperf \
     python3-pip python3-distutils \
